@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Для отображение настроек и опций приложения
 final class RMSettingsViewController: UIViewController {
 
     override func viewDidLoad() {

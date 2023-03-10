@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Контроллер для отображения и поиска Episode
 final class RMEpisodeViewController: UIViewController {
 
     override func viewDidLoad() {

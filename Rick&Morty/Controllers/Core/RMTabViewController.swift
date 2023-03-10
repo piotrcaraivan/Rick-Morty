@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Контроллер вкладок и корневых контроллеров
 final class RMTabBarController: UITabBarController {
     
     override func viewDidLoad() {
