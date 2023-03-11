@@ -19,8 +19,13 @@ final class RMService {
     /// Отправь Рику и Морти API Call
     /// - Parameters:
     ///   - request: экземпляр запроса
+    ///   - type: тот тип объекта, который мы ожидаем получить обратно
     ///   - completion: Обратный вызов с данными или ошибкой
-    public func execute(_ request: RMService, completion: @escaping () -> Void) {
+    public func execute<T: Codable>(
+        _ request: RMRequest,
+        expecting  type: T.Type,
+        completion: @escaping (Result<T, Error>) -> Void
+    ) {
         
     }
 }
