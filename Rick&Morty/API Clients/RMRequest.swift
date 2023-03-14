@@ -18,7 +18,7 @@ final class RMRequest {
     private let endpoint: RMEndpoint
     
     /// Компоненты пути для АПИ
-    private let pathComponents: Set<String>
+    private let pathComponents: [String]
     
     /// Запросы
     private let quaryParameters: [URLQueryItem]
@@ -65,11 +65,15 @@ final class RMRequest {
     ///   - quaryParameters: Collection of quary
     public init(
         endpoint: RMEndpoint,
-        pathComponents: Set<String> = [],
+        pathComponents: [String] = [],
         quaryParameters: [URLQueryItem] = []
     ) {
         self.endpoint = endpoint
         self.pathComponents = pathComponents
         self.quaryParameters = quaryParameters
     }
+}
+
+extension RMRequest {
+    static let listCharactersRequest = RMRequest(endpoint: .character)
 }
